@@ -22,7 +22,7 @@ namespace rush00.App.Views
 
         private void Button_OnClick(object? sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Close();
         }
     }
 }
