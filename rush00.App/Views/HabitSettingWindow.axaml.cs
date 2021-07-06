@@ -5,9 +5,9 @@ using Avalonia.Markup.Xaml;
 
 namespace rush00.App.Views
 {
-    public partial class MainWindow : Window
+    public partial class HabitSettingWindow : Window
     {
-        public MainWindow()
+        public HabitSettingWindow()
         {
             InitializeComponent();
 #if DEBUG
@@ -22,7 +22,10 @@ namespace rush00.App.Views
 
         private void Button_OnClick(object? sender, RoutedEventArgs e)
         {
-            Close();
+            Hide();
+            var habitTracking = new HabitTrackingWindow();
+            habitTracking.Show();
+            this.Close();
         }
     }
 }

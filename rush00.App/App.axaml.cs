@@ -17,12 +17,11 @@ namespace rush00.App
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow
+                desktop.MainWindow = new HabitSettingWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new HabitSettingWindowViewModel(),
                 };
             }
-
             base.OnFrameworkInitializationCompleted();
         }
     }

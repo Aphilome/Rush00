@@ -6,7 +6,7 @@ using Avalonia.Interactivity;
 
 namespace rush00.App.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class HabitSettingWindowViewModel : ViewModelBase
     {
         public string HabitSet => "Set a habit to track:";
         public string MotivationSet => "What would be a motivation:";

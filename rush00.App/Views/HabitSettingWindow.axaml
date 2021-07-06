@@ -4,12 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="rush00.App.Views.MainWindow"
+        x:Class="rush00.App.Views.HabitSettingWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Set new habit to track">
 
     <Design.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:HabitSettingWindowViewModel/>
     </Design.DataContext>
 
     <StackPanel>
@@ -24,10 +24,8 @@
         <TextBlock Text="{Binding DaysQuantitySet}" HorizontalAlignment="Left" Margin="5"/>    
         <NumericUpDown Margin="5"/>
         
-        <Button Click="Button_OnClick" Margin="10">
+        <Button Click="Button_OnClick" Margin="5">
             <TextBlock Text="{Binding LetsStartButton}" Width="80"/>
         </Button>
     </StackPanel>
-
-
 </Window>
