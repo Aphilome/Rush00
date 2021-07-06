@@ -23,6 +23,10 @@
         
         <TextBlock Text="{Binding DaysQuantitySet}" HorizontalAlignment="Left" Margin="5" />    
         <NumericUpDown Margin="5"/>
+        
+        <Button Click="Button_OnClick">
+            <TextBlock Text="{Binding LetsStartButton}" Width="80" Margin="10"/>
+        </Button>
     </StackPanel>
 
 

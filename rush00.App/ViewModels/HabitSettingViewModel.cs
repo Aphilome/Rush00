@@ -12,9 +12,6 @@ namespace rush00.App.ViewModels
         public string MotivationSet => "What would be a motivation:";
         public string StartDateHabitSet => "When will you start:";
         public string DaysQuantitySet => "How many days you want to challenge yourself for:";
-        private void OnButtonClick(object sender, RoutedEventArgs e)
-        {
-            //this.Close();
-        }
+        public string LetsStartButton => "Let's start!";
     }
 }
