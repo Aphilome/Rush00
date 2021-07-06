@@ -6,12 +6,24 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="rush00.App.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="rush00.App">
+        Title="Set new habit to track">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel>
+        <TextBlock Text="{Binding HabitSet}" HorizontalAlignment="Left" Margin="5" />    
+        <TextBox Margin="5"/>
+        
+        <TextBlock Text="{Binding MotivationSet}" HorizontalAlignment="Left" Margin="5" />    
+        <TextBox Margin="5"/>
+        
+        <DatePicker Header="{Binding StartDateHabitSet}" HorizontalAlignment="Left" Margin="5"/>
+        
+        <TextBlock Text="{Binding DaysQuantitySet}" HorizontalAlignment="Left" Margin="5" />    
+        <NumericUpDown Margin="5"/>
+    </StackPanel>
+
 
 </Window>
