@@ -8,11 +8,6 @@ namespace rush00.App.ViewModels
 {
     public class HabitSettingWindowViewModel : ViewModelBase
     {
-        public HabitSettingWindowViewModel()
-        {
-            
-        }
-        
         public string HabitSet => "Set a habit to track:";
         
         public string MotivationSet => "What would be a motivation:";
