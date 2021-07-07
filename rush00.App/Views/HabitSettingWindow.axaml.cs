@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using rush00.App.ViewModels;
 
 namespace rush00.App.Views
 {
@@ -24,8 +25,9 @@ namespace rush00.App.Views
         {
             Hide();
             var habitTracking = new HabitTrackingWindow();
+            habitTracking.DataContext = new HabitTrackingViewModel();
             habitTracking.Show();
-            this.Close();
+            Close();
         }
     }
 }

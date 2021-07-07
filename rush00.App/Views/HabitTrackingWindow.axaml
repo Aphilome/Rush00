@@ -1,9 +1,37 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="using:rush00.App.ViewModels"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="rush00.App.Views.HabitTrackingWindow"
         Title="HabitTrackingWindow">
-    Welcome to Avalonia!
+        
+        <!-- -->
+        <!-- <Design.DataContext> -->
+        <!--         <vm:HabitTrackingViewModel/> -->
+        <!-- </Design.DataContext> -->
+        <!-- -->
+        
+        
+        <ListBox Items="{Binding MyItems}">
+                <ListBox.ItemTemplate>
+                        <DataTemplate>
+                                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="4">
+                                        <!-- <Grid HorizontalAlignment="Stretch"> -->
+                                        <!--         <Grid.ColumnDefinitions> -->
+                                        <!--                 <ColumnDefinition Width="20"/> -->
+                                        <!--                 <ColumnDefinition Width="600"/> -->
+                                        <!--         </Grid.ColumnDefinitions> -->
+                                        <!--         <CheckBox Grid.Column="0" IsChecked="{Binding IsChecked}" VerticalAlignment="Center"/> -->
+                                        <!--         <TextBlock Grid.Column="1" Text="{Binding Date, StringFormat='{}{0:dd.MM.yyyy}'}" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>                                                 -->
+                                        <!-- </Grid> -->
+                                        <StackPanel Orientation="Horizontal" >
+                                                <CheckBox Margin="5" IsChecked="{Binding IsChecked}" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="5" Text="{Binding Date, StringFormat='{}{0:dd.MM.yyyy}'}" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                </Border>
+                        </DataTemplate>
+                </ListBox.ItemTemplate>
+        </ListBox>
 </Window>
