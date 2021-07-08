@@ -1,3 +1,4 @@
+using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -23,6 +24,9 @@ namespace rush00.App.Views
 
         private void Button_OnClick(object? sender, RoutedEventArgs e)
         {
+            var viewModel = DataContext as HabitSettingWindowViewModel;
+            if (viewModel == null)
+                throw new Exception("DataContext must be type of 'HabitSettingWindowViewModel'");
             Hide();
             var habitTracking = new HabitTrackingWindow();
             habitTracking.DataContext = new HabitTrackingViewModel();

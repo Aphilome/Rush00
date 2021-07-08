@@ -6,26 +6,61 @@ using Avalonia.Interactivity;
 
 namespace rush00.App.ViewModels
 {
-    public class HabitSettingWindowViewModel : ViewModelBase
+    public class HabitSettingWindowViewModel : CustomViewModelBase
     {
         public string HabitSet => "Set a habit to track:";
         
+        private string _habitNameInput;
+        public string HabitNameInput 
+        { 
+            get => _habitNameInput;
+            set
+            {
+                _habitNameInput = value;
+                OnPropertyChanged(nameof(IsButtonShow));
+            }
+        }
+
         public string MotivationSet => "What would be a motivation:";
+
+        private string _habitMotivationInput;
+        public string HabitMotivationInput 
+        { 
+            get => _habitMotivationInput;
+            set
+            {
+                _habitMotivationInput = value;
+                OnPropertyChanged(nameof(IsButtonShow));
+            }
+        }
         
         public string StartDateHabitSet => "When will you start:";
         
         public string DaysQuantitySet => "How many days you want to challenge yourself for:";
+
+        private uint _habitDayInput;
+        public uint HabitDayInput 
+        { 
+            get => _habitDayInput;
+            set
+            {
+                _habitDayInput = value;
+                OnPropertyChanged(nameof(IsButtonShow));
+            }
+        }
         
         public string LetsStartButton => "Let's start!";
 
-        private DateTimeOffset? _startDate = new DateTimeOffset(new DateTime(1950, 1, 1));
-        public DateTimeOffset? StartDate
+        private DateTimeOffset _startDate = new(DateTime.Today);
+        public DateTimeOffset StartDate
         {
-            get => _startDate == null ? null : new DateTimeOffset(_startDate.Value.DateTime);
-            set
-            {
-                _startDate = value;
-            }
+            get => new(_startDate.DateTime);
+            set => _startDate = value;
         }
+
+        public bool IsButtonShow => !(HabitDayInput <= 0
+                                     || string.IsNullOrWhiteSpace(HabitNameInput)
+                                     || string.IsNullOrWhiteSpace(HabitMotivationInput));
+        
     }
 }

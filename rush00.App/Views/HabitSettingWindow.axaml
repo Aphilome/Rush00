@@ -14,17 +14,17 @@
 
     <StackPanel>
         <TextBlock Text="{Binding HabitSet}" HorizontalAlignment="Left" Margin="5" />    
-        <TextBox Margin="5"/>
+        <TextBox Text="{Binding HabitNameInput}" Margin="5"/>
         
         <TextBlock Text="{Binding MotivationSet}" HorizontalAlignment="Left" Margin="5" />    
-        <TextBox Margin="5"/>
+        <TextBox Text="{Binding HabitMotivationInput}" Margin="5"/>
         
         <DatePicker SelectedDate="{Binding StartDate, Mode=TwoWay}" Header="{Binding StartDateHabitSet}" HorizontalAlignment="Left" Margin="5"/>
         
         <TextBlock Text="{Binding DaysQuantitySet}" HorizontalAlignment="Left" Margin="5"/>    
-        <NumericUpDown Margin="5"/>
+        <NumericUpDown Text="{Binding HabitDayInput}" Margin="5"/>
         
-        <Button Click="Button_OnClick" Margin="5">
+        <Button IsVisible="{Binding IsButtonShow}" Click="Button_OnClick" Margin="5">
             <TextBlock Text="{Binding LetsStartButton}" Width="80"/>
         </Button>
     </StackPanel>
