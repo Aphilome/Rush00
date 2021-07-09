@@ -6,6 +6,8 @@ namespace rush00.App.ViewModels
 {
     public class HabitTrackingViewModel: ViewModelBase
     {
+        public HabitSettingViewModel HabitSetting { get; set; }
+        
         public List<HabitCheck> HabitChecks { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using Avalonia.Interactivity;
 
 namespace rush00.App.ViewModels
 {
-    public class HabitSettingWindowViewModel : CustomViewModelBase
+    public class HabitSettingViewModel : CustomViewModelBase
     {
         public string HabitSet => "Set a habit to track:";
         
@@ -62,5 +62,6 @@ namespace rush00.App.ViewModels
                                      || string.IsNullOrWhiteSpace(HabitNameInput)
                                      || string.IsNullOrWhiteSpace(HabitMotivationInput));
         
+        public bool IsFinished { get; set; }
     }
 }

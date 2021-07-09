@@ -9,7 +9,7 @@
         Title="Set new habit to track">
 
     <Design.DataContext>
-        <vm:HabitSettingWindowViewModel/>
+        <vm:HabitSettingViewModel/>
     </Design.DataContext>
 
     <StackPanel>

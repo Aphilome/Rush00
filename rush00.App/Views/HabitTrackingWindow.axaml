@@ -18,16 +18,8 @@
                 <ListBox.ItemTemplate>
                         <DataTemplate>
                                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="4">
-                                        <!-- <Grid HorizontalAlignment="Stretch"> -->
-                                        <!--         <Grid.ColumnDefinitions> -->
-                                        <!--                 <ColumnDefinition Width="20"/> -->
-                                        <!--                 <ColumnDefinition Width="600"/> -->
-                                        <!--         </Grid.ColumnDefinitions> -->
-                                        <!--         <CheckBox Grid.Column="0" IsChecked="{Binding IsChecked}" VerticalAlignment="Center"/> -->
-                                        <!--         <TextBlock Grid.Column="1" Text="{Binding Date, StringFormat='{}{0:dd.MM.yyyy}'}" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>                                                 -->
-                                        <!-- </Grid> -->
                                         <StackPanel Orientation="Horizontal" >
-                                                <CheckBox Margin="5" IsChecked="{Binding IsChecked}" VerticalAlignment="Center"/>
+                                                <CheckBox Margin="5" IsChecked="{Binding IsChecked}" VerticalAlignment="Center" Checked="ToggleButton_OnChecked"/>
                                                 <TextBlock Margin="5" Text="{Binding Date, StringFormat='{}{0:dd.MM.yyyy}'}" VerticalAlignment="Center"/>
                                         </StackPanel>
                                 </Border>

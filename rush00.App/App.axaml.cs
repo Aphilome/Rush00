@@ -19,7 +19,7 @@ namespace rush00.App
             {
                 desktop.MainWindow = new HabitSettingWindow
                 {
-                    DataContext = new HabitSettingWindowViewModel(),
+                    DataContext = new HabitSettingViewModel(),
                 };
             }
             base.OnFrameworkInitializationCompleted();
