@@ -6,18 +6,6 @@ namespace rush00.App.ViewModels
 {
     public class HabitTrackingViewModel: ViewModelBase
     {
-        public List<HabitCheck> MyItems { get; set; } = new List<HabitCheck>()
-        {
-            new HabitCheck
-            {
-                Date = DateTime.Today,
-                IsChecked = false
-            },
-            new HabitCheck
-            {
-                Date = DateTime.Today,
-                IsChecked = false
-            },
-        };
+        public List<HabitCheck> HabitChecks { get; set; }
     }
 }

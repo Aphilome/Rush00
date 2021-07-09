@@ -14,7 +14,7 @@
         <!-- -->
         
         
-        <ListBox Items="{Binding MyItems}">
+        <ListBox Items="{Binding HabitChecks}">
                 <ListBox.ItemTemplate>
                         <DataTemplate>
                                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="4">
