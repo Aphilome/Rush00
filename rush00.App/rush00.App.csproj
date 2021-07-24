@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
+        <Folder Include="Models" />
         <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
     </ItemGroup>
@@ -18,5 +19,8 @@
       <Compile Update="Views\HabitSettingWindow.axaml.cs">
         <DependentUpon>MainWindow.axaml</DependentUpon>
       </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\rush00.Data\rush00.Data.csproj" />
     </ItemGroup>
 </Project>

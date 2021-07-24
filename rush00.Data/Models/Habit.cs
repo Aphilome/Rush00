@@ -1,5 +1,5 @@
 ﻿
-namespace rush00.App.Models
+namespace rush00.Data.Models
 {
     public class Habit
     {

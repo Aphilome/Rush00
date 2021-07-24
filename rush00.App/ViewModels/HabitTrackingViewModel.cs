@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using rush00.App.Models;
+using rush00.Data.Models;
 
 namespace rush00.App.ViewModels
 {
