@@ -5,8 +5,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
-using rush00.App.Models;
 using rush00.App.ViewModels;
+using rush00.Data.Models;
 
 namespace rush00.App.Views
 {
