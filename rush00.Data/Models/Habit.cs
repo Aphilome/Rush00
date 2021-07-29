@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace rush00.Data.Models
 {
@@ -11,7 +12,7 @@ namespace rush00.Data.Models
         public string Motivation { get; set; }
         
         public bool IsFinished { get; set; }
-        
-        public HabitCheck[] Checks { get; set; }
+
+        public List<HabitCheck> Checks { get; set; }
     }
 }
